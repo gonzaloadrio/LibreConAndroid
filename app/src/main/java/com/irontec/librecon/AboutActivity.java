@@ -4,11 +4,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.webkit.WebView;
 
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
-import com.irontec.librecon.R;
 
 public class AboutActivity extends Activity {
 
@@ -24,9 +22,12 @@ public class AboutActivity extends Activity {
         setContentView(R.layout.activity_about);
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
-        WebView webView = (WebView) findViewById(R.id.about_webview);
-        webView.getSettings().setJavaScriptEnabled(false);
-        webView.loadUrl("https://mobile.librecon.io/about/");
+//        WebView webView = (WebView) findViewById(R.id.about_webview);
+//        webView.getSettings().setJavaScriptEnabled(false);
+//        webView.loadUrl("https://mobile.librecon.io/about/");
+
+
+
     }
 
 
