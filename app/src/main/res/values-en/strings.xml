@@ -110,4 +110,10 @@
     <string name="tutorial_again">¡Ops! It seems you found a site in the application where a code is required for its use.\n\nIf you applied through the website to attend LibreCon
     you should have the code in your email, otherwise, apply through the website. It is quick and easy!</string>
     <string name="title_activity_place_detail"></string>
+    <string name="year"> 2015 </string>
+    <string name="organized_by">is an event organized by: </string>
+    <string name="designed_and_developed_by">Mobile Application designed and developed by </string>
+    <string name="company">Tegnix</string>
+    <string name="company2">irontec</string>
+    <string name="modified_by">Modified by </string>
 </resources>
