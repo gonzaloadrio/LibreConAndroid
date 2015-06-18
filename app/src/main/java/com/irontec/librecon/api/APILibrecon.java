@@ -15,13 +15,17 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.SSLSession;
+
 import okio.BufferedSource;
 import okio.Timeout;
 
 /**
  * Created by Asier Fernandez on 19/09/14.
  */
-public class APILibrecon {
+
+public class APILibrecon{
 
     private final static String TAG = APILibrecon.class.getSimpleName();
 
@@ -57,6 +61,16 @@ public class APILibrecon {
         client.setConnectTimeout(10, TimeUnit.SECONDS);
         client.setWriteTimeout(10, TimeUnit.SECONDS);
         client.setReadTimeout(20, TimeUnit.SECONDS);
+        ///////////////////////////////////////////////////////////
+        // TEMPORAL MIENTRAS EL HOSTNAME DEL SSL SEA DISTINTO    //
+        ///////////////////////////////////////////////////////////
+        client.setHostnameVerifier(new HostnameVerifier() {
+            @Override
+            public boolean verify(String s, SSLSession sslSession) {
+                return true;
+            }
+        });
+        ///////////////////////////////////////////////////////////
         Log.d(TAG, "getConnectTimeout: " + client.getConnectTimeout());
         Log.d(TAG, "getWriteTimeout: " + client.getWriteTimeout());
         Log.d(TAG, "getReadTimeout: " + client.getReadTimeout());
@@ -97,6 +111,7 @@ public class APILibrecon {
     }
 
     private Request getRequest(String endpoint) {
+        Request r = new Request.Builder().url(composeUrl(endpoint)).build();
         return new Request.Builder().url(composeUrl(endpoint)).build();
     }
 
@@ -175,4 +190,5 @@ public class APILibrecon {
         Log.d(TAG, "ERROR - " + jsonObject.toString());
         return jsonObject;
     }
+
 }

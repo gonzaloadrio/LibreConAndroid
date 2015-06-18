@@ -24,8 +24,8 @@
     <!-- ProfileActivity -->
     <string name="title_activity_profile"></string>
     <!-- Common Texts -->
-    <string name="dia_11">Día 11</string>
-    <string name="dia_12">Día 12</string>
+    <string name="dia_11">Día 29</string>
+    <string name="dia_12">Día 30</string>
     <string name="search">Buscar</string>
     <string name="search_hint">Ej: Asier Fernandez</string>
     <string name="speaker">Ponentes:</string>
@@ -36,7 +36,7 @@
     <string name="discard">Descartar</string>
     <string name="see_more">Ver más</string>
     <string name="request">Solicitar</string>
-    <string name="welcome">Bienvenido a la Librecon \'14</string>
+    <string name="welcome">Bienvenido a la Librecon \'15</string>
     <string name="guest">Invitado</string>
     <string name="enter">Entrar</string>
     <string name="resend_code">reenviar código</string>

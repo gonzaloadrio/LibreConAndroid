@@ -110,4 +110,10 @@
     zure posta elektronikoan izan beharko zenuke kodea, bestela, webgunean eman ezazu izena.
     Azkarra eta erreza da!</string>
     <string name="title_activity_place_detail"></string>
+    <string name="year"> 2015 </string>
+    <string name="organized_by">es un evento organizado por: </string>
+    <string name="designed_and_developed_by">Aplicación móvil diseñada y desarrollada por </string>
+    <string name="company">Tegnix</string>
+    <string name="company2">irontec</string>
+    <string name="modified_by">Modificada por </string>
 </resources>

@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.irontec.librecon.R;
-import com.squareup.picasso.Picasso;
+import com.irontec.librecon.api.PicassoUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,7 +58,7 @@ public class AssistantsAdapter extends BaseAdapter implements Filterable {
 
         if(assistant != null) {
             if (!assistant.getPicUrlCircle().isEmpty()) {
-                Picasso.with(mContext)
+                PicassoUtil.getInstance(mContext)
                         .load(assistant.getPicUrlCircle())
                         .placeholder(R.drawable.user_placeholder)
                         .error(R.drawable.user_placeholder)
@@ -66,7 +66,7 @@ public class AssistantsAdapter extends BaseAdapter implements Filterable {
                         .fit()
                         .into(viewHolder.image);
             } else {
-                Picasso.with(mContext)
+                PicassoUtil.getInstance(mContext)
                         .load(R.drawable.user_placeholder)
                         .centerCrop()
                         .fit()

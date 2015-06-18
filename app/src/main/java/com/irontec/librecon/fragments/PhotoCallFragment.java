@@ -25,11 +25,10 @@ import android.widget.Toast;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.irontec.librecon.DaoApplication;
-import com.irontec.librecon.MainActivity;
 import com.irontec.librecon.R;
 import com.irontec.librecon.adapters.PhotoCallAdapter;
 import com.irontec.librecon.api.APILibrecon;
-import com.squareup.picasso.Picasso;
+import com.irontec.librecon.api.PicassoUtil;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -205,7 +204,7 @@ public class PhotoCallFragment extends BaseFragment {
         mExpandedImage = (ImageView) mRootView.findViewById(R.id.expanded_image);
         mExpandedLayout = (LinearLayout) mRootView.findViewById(R.id.expanded_layout);
         if (url != null && !url.isEmpty())
-            Picasso.with(getActivity()).load(url).into(mExpandedImage);
+            PicassoUtil.getInstance(getActivity()).load(url).into(mExpandedImage);
 
         // Calculate the starting and ending bounds for the zoomed-in image.
         // This step involves lots of math. Yay, math.

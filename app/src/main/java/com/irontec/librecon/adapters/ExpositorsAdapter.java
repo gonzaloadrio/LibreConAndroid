@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.irontec.librecon.R;
-import com.squareup.picasso.Picasso;
+import com.irontec.librecon.api.PicassoUtil;
 
 import java.util.List;
 
@@ -49,12 +49,13 @@ public class ExpositorsAdapter extends BaseAdapter {
         Expositor expositor = mData.get(position);
 
         if (expositor.getPicUrl() != null && !expositor.getPicUrl().isEmpty()) {
-            Picasso.with(mContext).load(expositor.getPicUrl())
+            PicassoUtil.getInstance(mContext)
+                    .load(expositor.getPicUrl())
                     .placeholder(R.drawable.placeholder_large)
                     .error(R.drawable.placeholder_large)
                     .into(viewHolder.picture);
         } else {
-            Picasso.with(mContext)
+            PicassoUtil.getInstance(mContext)
                     .load(R.drawable.placeholder_large)
                     .into(viewHolder.picture);
         }

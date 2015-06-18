@@ -11,16 +11,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.irontec.librecon.R;
-import com.irontec.librecon.domains.AssistantDomain;
-import com.irontec.librecon.domains.AssistantMeetingDomain;
+import com.irontec.librecon.api.PicassoUtil;
 import com.irontec.librecon.utils.DateUtils;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import librecon.Assistant;
-import librecon.AssistantMeeting;
 import librecon.Me;
 import librecon.Meeting;
 
@@ -69,7 +66,7 @@ public class MeetingsAdapter extends BaseAdapter {
 
         if (meeting != null && assistant != null) {
             if (!assistant.getPicUrlCircle().isEmpty()) {
-                Picasso.with(mContext)
+                PicassoUtil.getInstance(mContext)
                         .load(assistant.getPicUrlCircle())
                         .placeholder(R.drawable.user_placeholder)
                         .error(R.drawable.user_placeholder)
@@ -77,7 +74,7 @@ public class MeetingsAdapter extends BaseAdapter {
                         .fit()
                         .into(viewHolder.picture);
             } else {
-                Picasso.with(mContext)
+                PicassoUtil.getInstance(mContext)
                         .load(R.drawable.user_placeholder)
                         .centerCrop()
                         .fit()

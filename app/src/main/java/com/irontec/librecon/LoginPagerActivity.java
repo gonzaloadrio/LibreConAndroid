@@ -33,7 +33,6 @@ public class LoginPagerActivity extends FragmentActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         Tracker tracker = ((DaoApplication) getApplication()).getTracker(
                 DaoApplication.TrackerName.APP_TRACKER);
         tracker.setScreenName("com.irontec.librecon.LoginPagerActivity");

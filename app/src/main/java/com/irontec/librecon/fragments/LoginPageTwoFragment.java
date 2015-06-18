@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -125,7 +126,7 @@ public class LoginPageTwoFragment extends Fragment {
         mCancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mFloatLabelEmailLayout.getVisibility() == View.VISIBLE){
+                if (mFloatLabelEmailLayout.getVisibility() == View.VISIBLE) {
                     fadeOutAnimation(mResendTutorial);
                     fadeOutAnimation(mFloatLabelEmailLayout);
                     fadeInAnimation(mTutorial);
@@ -222,6 +223,7 @@ public class LoginPageTwoFragment extends Fragment {
                 }
                 JSONObject response = api.post(APILibrecon.AUTH_CODE, jsonObj.toString());
                 if (response != null && !response.has("errorCode")) {
+                    Log.d("OKI", jsonObj.toString() + "---->    <-----" + response);
                     return response;
                 }
             } catch (JSONException jsEx) {

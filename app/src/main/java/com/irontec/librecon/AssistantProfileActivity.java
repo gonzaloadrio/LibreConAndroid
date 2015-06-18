@@ -24,8 +24,8 @@ import android.widget.TextView;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.irontec.librecon.api.APILibrecon;
+import com.irontec.librecon.api.PicassoUtil;
 import com.irontec.librecon.domains.MeDomain;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -77,9 +77,10 @@ public class AssistantProfileActivity extends Activity {
 
         if (mAssistant != null) {
             if (mAssistant.getPicUrl() != null && !mAssistant.getPicUrl().isEmpty()) {
-                Picasso.with(this).load(mAssistant.getPicUrlCircle()).into(assistantPicture);
+
+                PicassoUtil.getInstance(this).load(mAssistant.getPicUrlCircle()).into(assistantPicture);
             } else {
-                Picasso.with(this).load(R.drawable.user_placeholder).into(assistantPicture);
+                PicassoUtil.getInstance(this).load(R.drawable.user_placeholder).into(assistantPicture);
             }
             if (!mAssistant.getLastName().isEmpty()) {
                 assistantName.setText(mAssistant.getName() + " " + mAssistant.getLastName());

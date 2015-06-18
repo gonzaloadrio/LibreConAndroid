@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import com.irontec.librecon.R;
+import com.irontec.librecon.api.PicassoUtil;
 import com.irontec.librecon.ui.SquaredImageView;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -48,7 +48,7 @@ public class PhotoCallAdapter extends BaseAdapter {
         String url = mUrls.get(position);
 
         if(image != null && !image.isEmpty()) {
-            Picasso.with(mContext)
+            PicassoUtil.getInstance(mContext)
                     .load(url)
                     .placeholder(R.drawable.placeholder_large)
                     .error(R.drawable.placeholder_large)
@@ -57,7 +57,7 @@ public class PhotoCallAdapter extends BaseAdapter {
                     .into(viewHolder.image);
             viewHolder.image.setTag(url);
         } else {
-            Picasso.with(mContext)
+            PicassoUtil.getInstance(mContext)
                     .load(R.drawable.placeholder_large)
                     .fit()
                     .centerCrop()

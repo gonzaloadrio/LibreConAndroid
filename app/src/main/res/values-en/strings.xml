@@ -24,8 +24,8 @@
     <!-- ProfileActivity -->
     <string name="title_activity_profile"></string>
     <!-- Common Texts -->
-    <string name="dia_11">Day 11</string>
-    <string name="dia_12">Day 12</string>
+    <string name="dia_11">Day 29</string>
+    <string name="dia_12">Day 30</string>
     <string name="search">Search</string>
     <string name="search_hint">i.e.: Asier Fernandez</string>
     <string name="speaker">Speakers:</string>
@@ -36,7 +36,7 @@
     <string name="discard">Download</string>
     <string name="see_more">See more</string>
     <string name="request">Request</string>
-    <string name="welcome">Welcome to Librecon \'14</string>
+    <string name="welcome">Welcome to Librecon \'15</string>
     <string name="guest">Guest
     </string>
     <string name="enter">Enter</string>
@@ -92,7 +92,7 @@
     <string name="dialog_title">Meeting request</string>
     <string name="dialog_message">Do you want to ask %1$s for a meeting?</string>
     <!-- Places view -->
-    <string name="txoko">txoko</string>
+    <string name="txoko">P2P</string>
     <string name="expositor">exhibitor</string>
     <string name="title_activity_login_pager">LoginPagerActivity</string>
     <string name="hello_world">Hello world!</string>

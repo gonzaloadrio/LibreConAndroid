@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.irontec.librecon.R;
-import com.squareup.picasso.Picasso;
+import com.irontec.librecon.api.PicassoUtil;
 
 import java.util.List;
 
@@ -49,12 +49,13 @@ public class TxokosAdapter extends BaseAdapter {
         Txoko txoko = mData.get(position);
 
         if (txoko.getPicUrl() != null && !txoko.getPicUrl().isEmpty()) {
-            Picasso.with(mContext).load(txoko.getPicUrl())
+            PicassoUtil.getInstance(mContext)
+                    .load(txoko.getPicUrl())
                     .placeholder(R.drawable.placeholder_large)
                     .error(R.drawable.placeholder_large)
                     .into(viewHolder.picture);
         } else {
-            Picasso.with(mContext)
+            PicassoUtil.getInstance(mContext)
                     .load(R.drawable.placeholder_large)
                     .into(viewHolder.picture);
         }

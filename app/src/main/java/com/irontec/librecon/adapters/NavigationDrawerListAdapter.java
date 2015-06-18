@@ -9,8 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.irontec.librecon.R;
+import com.irontec.librecon.api.PicassoUtil;
 import com.irontec.librecon.domains.MeDomain;
-import com.squareup.picasso.Picasso;
 
 import librecon.Me;
 
@@ -60,18 +60,22 @@ public class NavigationDrawerListAdapter extends BaseAdapter {
                 mMe = MeDomain.get(mContext);
                 if (mMe != null) {
                     if (!mMe.getPicUrlCircle().isEmpty()) {
-                        Picasso.with(mContext).load(mMe.getPicUrlCircle())
+                        PicassoUtil.getInstance(mContext)
+                                .load(mMe.getPicUrlCircle())
                                 .placeholder(R.drawable.user_placeholder)
                                 .error(R.drawable.user_placeholder)
                                 .into(userPicture);
                     } else {
-                        Picasso.with(mContext).load(R.drawable.user_placeholder)
+                        PicassoUtil.getInstance(mContext)
+                                .load(R.drawable.user_placeholder)
                                 .into(userPicture);
                     }
                     userName.setText(mMe.getName() + " " + mMe.getLastName());
                     userEmail.setText(mMe.getEmail());
                 } else {
-                    Picasso.with(mContext).load(R.drawable.user_placeholder).into(userPicture);
+                    PicassoUtil.getInstance(mContext)
+                            .load(R.drawable.user_placeholder)
+                            .into(userPicture);
                     userName.setText(mContext.getString(R.string.guest));
                 }
             } else {
@@ -100,7 +104,7 @@ public class NavigationDrawerListAdapter extends BaseAdapter {
                         resourceId = R.drawable.ic_06_photocall;
                         break;
                 }
-                Picasso.with(mContext).load(resourceId).into(icon);
+                PicassoUtil.getInstance(mContext).load(resourceId).into(icon);
             }
 
         return convertView;

@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.irontec.librecon.R;
-import com.squareup.picasso.Picasso;
+import com.irontec.librecon.api.PicassoUtil;
 
 import java.util.List;
 
@@ -53,13 +53,13 @@ public class SpeakersAdapter extends BaseAdapter {
 
         if (speaker != null) {
             if (!speaker.getPicUrlCircle().isEmpty()) {
-                Picasso.with(mContext)
+                PicassoUtil.getInstance(mContext)
                         .load(speaker.getPicUrlCircle())
                         .centerCrop()
                         .fit()
                         .into(viewHolder.image);
             } else {
-                Picasso.with(mContext)
+                PicassoUtil.getInstance(mContext)
                         .load(R.drawable.user_placeholder)
                         .centerCrop()
                         .fit()

@@ -24,8 +24,8 @@
     <!-- ProfileActivity -->
     <string name="title_activity_profile"></string>
     <!-- Common Texts -->
-    <string name="dia_11">Día 11</string>
-    <string name="dia_12">Día 12</string>
+    <string name="dia_11">Día 29</string>
+    <string name="dia_12">Día 30</string>
     <string name="search">Buscar</string>
     <string name="search_hint">Ej: Asier Fernandez</string>
     <string name="speaker">Ponentes:</string>
@@ -36,7 +36,7 @@
     <string name="discard">Descartar</string>
     <string name="see_more">Ver más</string>
     <string name="request">Solicitar</string>
-    <string name="welcome">Bienvenido a la Librecon \'14</string>
+    <string name="welcome">Bienvenido a la Librecon \'15</string>
     <string name="guest">Invitado</string>
     <string name="enter">Entrar</string>
     <string name="resend_code">reenviar código</string>
@@ -91,7 +91,7 @@
     <string name="dialog_title">Solicitar reunión</string>
     <string name="dialog_message">¿Deseas solicitar una reunión con %1$s?</string>
     <!-- Places view -->
-    <string name="txoko">reunión</string>
+    <string name="txoko">P2P</string>
     <string name="expositor">expositor</string>
     <string name="title_activity_login_pager">LoginPagerActivity</string>
     <string name="hello_world">Hello world!</string>
@@ -111,5 +111,11 @@
     deberías de tener el código en tu cuenta de correo electrónico, de lo contrario, inscribete en la web.
     !Es rápido y sencillo!</string>
     <string name="title_activity_place_detail"></string>
+    <string name="year"> 2015 </string>
+    <string name="organized_by">es un evento organizado por: </string>
+    <string name="designed_and_developed_by">Aplicación móvil diseñada y desarrollada por </string>
+    <string name="company">Tegnix</string>
+    <string name="company2">irontec</string>
+    <string name="modified_by">Modificada por </string>
 
 </resources>

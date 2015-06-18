@@ -12,10 +12,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.irontec.librecon.R;
+import com.irontec.librecon.api.PicassoUtil;
 import com.irontec.librecon.domains.ScheduleSpeakerDomain;
 import com.irontec.librecon.domains.SpeakerDomain;
 import com.irontec.librecon.utils.DateUtils;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,6 @@ import java.util.List;
 import librecon.Schedule;
 import librecon.ScheduleSpeaker;
 import librecon.Speaker;
-import librecon.SpeakerDao;
 
 /**
  * Created by Asier Fernandez on 16/09/14.
@@ -69,7 +68,7 @@ public class ScheduleAdapter extends BaseAdapter implements Filterable {
 
         if (schedule != null) {
             if (schedule.getPicUrlSquare() != null && !schedule.getPicUrlSquare().isEmpty()) {
-                Picasso.with(mContext)
+                PicassoUtil.getInstance(mContext)
                         .load(schedule.getPicUrlSquare())
                         .placeholder(R.drawable.placeholder_square)
                         .error(R.drawable.placeholder_square)
@@ -77,7 +76,7 @@ public class ScheduleAdapter extends BaseAdapter implements Filterable {
                         .fit()
                         .into(viewHolder.image);
             } else {
-                Picasso.with(mContext)
+                PicassoUtil.getInstance(mContext)
                         .load(R.drawable.placeholder_square)
                         .centerCrop()
                         .fit()
